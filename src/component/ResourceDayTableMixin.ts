@@ -161,17 +161,19 @@ export default class ResourceDayTableMixin extends Mixin implements ResourceDayT
 
 
   renderHeadTrHtml() { // might return two trs
-    if (this.daysPerRow > 1) {
+    //always do two levels
+    if (true) {
       // do two levels
       if (this.datesAboveResources) {
         return this.renderHeadDateAndResourceHtml()
       } else {
         return this.renderHeadResourceAndDateHtml()
       }
-    } else {
-      // do one level
-      return this.renderHeadResourceHtml()
     }
+    // else {
+    //   // do one level
+    //   return this.renderHeadResourceHtml()
+    // }
   }
 
 
