@@ -338,7 +338,10 @@ export default class ResourceDayTableMixin extends Mixin implements ResourceDayT
 
 
   renderResourceBgCellHtml(date, resource) {
-    return (this as any).renderBgCellHtml(date, 'data-resource-id="' + resource.id + '"')
+    //return (this as any).renderBgCellHtml(date, 'data-resource-id="' + resource.id + '"')
+    let dayStart = this.flattenedResources.length > 0 && this.flattenedResources[0].id === resource.id
+    let dayEnd = this.flattenedResources.length > 0 && this.flattenedResources[this.flattenedResources.length - 1].id === resource.id
+    return (this as any).renderBgCellHtml(date, 'data-resource-id="' + resource.id + '" data-day-start="' + dayStart + '" data-day-end="' + dayEnd + '"')
   }
 
 

@@ -981,7 +981,7 @@ declare module 'fullcalendar-scheduler/src/resource-agenda/config' {
 }
 declare module 'fullcalendar-scheduler/src/types/jquery-hooks' {
 	import { EventObjectInput } from 'fullcalendar';
-	import { ResourceInput } from 'fullcalendar-scheduler/src/types/input-types'; global  {
+	import { ResourceInput } from 'fullcalendar-scheduler/src/types/input-types'; global {
 	    interface JQuery {
 	        fullCalendar(method: 'getResources'): ResourceInput[];
 	        fullCalendar(method: 'addResource', resourceInput: ResourceInput, scroll?: boolean): JQuery;
